@@ -58,6 +58,13 @@ The `Client` class is a wrapper around `Socket` that simplifies the process of c
 
 ## Usage
 
+### Imports
+
+```java
+ import simpleSockets.Server;
+ import simpleSockets.Client;
+```
+
 ### Starting the Server
 
 1. Run the `Server` on a specified port (e.g., 1234):
