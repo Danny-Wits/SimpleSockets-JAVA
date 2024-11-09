@@ -1,3 +1,5 @@
+package simpleSockets;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -91,6 +93,19 @@ public class Server {
         } catch (IOException e) {
             e.printStackTrace();
             return "Error";
+        }
+    }
+
+    public void stop() {
+        try {
+            if (!client.isClosed()) {
+                client.close();
+            }
+            if (!serverSocket.isClosed()) {
+                serverSocket.close();
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 }

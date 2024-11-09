@@ -1,3 +1,4 @@
+package simpleSockets;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -117,5 +118,16 @@ public class Client {
             return false;
         }
     }
+
+    public boolean close() {
+        try {
+            me.close();
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+    }
+
 }
 // ! @Danny-Wits: Documented by LLMs ...
